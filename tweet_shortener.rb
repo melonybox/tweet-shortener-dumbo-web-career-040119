@@ -18,6 +18,7 @@ end
 def word_substituter(list)
   newList = list.split(" ")
   
+<<<<<<< HEAD
   newList.collect! do |x|
     if dictionary.keys.include?(x.downcase)
       x = dictionary[x.downcase]
@@ -26,12 +27,22 @@ def word_substituter(list)
     end
   end
   newList.join(" ")
+=======
+  newList.each do |x|
+    if dictionary.keys.include?(x.downcase)
+      x = list[x.downcase]
+    end
+  end
+  newWords = newList.join(" ")
+  return newWords
+>>>>>>> f664d8fff5c97e847a248d94de549f2a4b5aebd0
 end
 
 def bulk_tweet_shortener(list)
   list.each do |x|
     puts word_substituter(x)
   end
+<<<<<<< HEAD
 end
 
 def selective_tweet_shortener(list)
@@ -48,4 +59,6 @@ def shortened_tweet_truncator(list)
   else
     return list
   end
+=======
+>>>>>>> f664d8fff5c97e847a248d94de549f2a4b5aebd0
 end
